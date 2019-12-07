@@ -16,13 +16,11 @@ namespace Vektorel.KitapBankosu.BLL
             try
             {
                 Helper hlp = new Helper();
-
                 //SqlParameter[] pr = new SqlParameter[1];
                 //pr[0] = new SqlParameter("@TurAd", turad);
-
                 SqlParameter[] p = {new SqlParameter("@TurAd",tur.Turad)};
 
-                return hlp.ExcuteNonQuery("Insert into tblTurler values(@TurAd)", p) > 0;
+                return hlp.ExecuteNonQuery("Insert into tblTurler values(@TurAd)", p) > 0;
             }
             catch (Exception)
             {

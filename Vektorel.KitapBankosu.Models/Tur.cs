@@ -9,7 +9,7 @@ namespace Vektorel.KitapBankosu.Models
     public class Tur
     {
         public int Turid { get; set; }
-        public string Turad { get; set; }
+        public string Turad { get; set; }      
 
     }
 }

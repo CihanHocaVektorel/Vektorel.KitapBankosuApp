@@ -34,10 +34,8 @@ namespace Vektorel.KitapBankosuApp
             try
             {
                 TurBL t = new TurBL();
-
                 Tur tur = new Tur();
                 tur.Turad = txtTurAd.Text;
-
                 MessageBox.Show(t.TurEkle(tur)?"Ekleme Başarılı":"Başarısız"); 
             }
             catch (SqlException ex)
@@ -60,6 +58,12 @@ namespace Vektorel.KitapBankosuApp
                 MessageBox.Show("Bilinmeyen Hata!");
             }
             
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmTurBul frm = new frmTurBul();
+            frm.ShowDialog();
         }
     }
 }

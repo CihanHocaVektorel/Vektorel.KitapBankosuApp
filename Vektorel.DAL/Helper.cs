@@ -13,7 +13,7 @@ namespace Vektorel.DAL
     {
         SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString);
 
-        public int ExcuteNonQuery(string cmdtext, SqlParameter[] p = null)
+        public int ExecuteNonQuery(string cmdtext, SqlParameter[] p = null)
         {
             try
             {
@@ -37,6 +37,11 @@ namespace Vektorel.DAL
                     cn.Close();
                 }
             }
+        }
+
+        public SqlDataReader ExecuteReader(string cmdtext,SqlParameter[] p=null)
+        {
+
         }
     }
 }
