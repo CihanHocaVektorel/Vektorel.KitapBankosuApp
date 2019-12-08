@@ -27,5 +27,7 @@ namespace Vektorel.KitapBankosu.BLL
                 throw;
             }
         }
+
+        
     }
 }

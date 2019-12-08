@@ -38,6 +38,7 @@
             this.dtDTar = new System.Windows.Forms.DateTimePicker();
             this.dtOlumTar = new System.Windows.Forms.DateTimePicker();
             this.chkYasiyor = new System.Windows.Forms.CheckBox();
+            this.btnYazarBul = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAd
@@ -129,11 +130,22 @@
             this.chkYasiyor.UseVisualStyleBackColor = true;
             this.chkYasiyor.CheckedChanged += new System.EventHandler(this.ChkYasiyor_CheckedChanged);
             // 
+            // btnYazarBul
+            // 
+            this.btnYazarBul.Location = new System.Drawing.Point(105, 203);
+            this.btnYazarBul.Name = "btnYazarBul";
+            this.btnYazarBul.Size = new System.Drawing.Size(100, 23);
+            this.btnYazarBul.TabIndex = 12;
+            this.btnYazarBul.Text = "Yazar Bul";
+            this.btnYazarBul.UseVisualStyleBackColor = true;
+            this.btnYazarBul.Click += new System.EventHandler(this.BtnYazarBul_Click);
+            // 
             // frmYazar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 252);
+            this.ClientSize = new System.Drawing.Size(306, 252);
+            this.Controls.Add(this.btnYazarBul);
             this.Controls.Add(this.chkYasiyor);
             this.Controls.Add(this.dtOlumTar);
             this.Controls.Add(this.dtDTar);
@@ -152,16 +164,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtAd;
-        private System.Windows.Forms.TextBox txtSoyad;
-        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Label lblSoyad;
         private System.Windows.Forms.Label lblDtar;
         private System.Windows.Forms.Label lblOlumTarih;
-        private System.Windows.Forms.DateTimePicker dtDTar;
-        private System.Windows.Forms.DateTimePicker dtOlumTar;
-        private System.Windows.Forms.CheckBox chkYasiyor;
+        private System.Windows.Forms.Button btnYazarBul;
+        public System.Windows.Forms.TextBox txtAd;
+        public System.Windows.Forms.TextBox txtSoyad;
+        public System.Windows.Forms.Button btnEkle;
+        public System.Windows.Forms.DateTimePicker dtDTar;
+        public System.Windows.Forms.DateTimePicker dtOlumTar;
+        public System.Windows.Forms.CheckBox chkYasiyor;
     }
 }
