@@ -17,6 +17,7 @@ namespace Vektorel.KitapBankosuApp
     public partial class frmYazar : Form
     {
         public Islem KayitIslem { get; set; }
+        public int yazarid;
         public frmYazar()
         {
             InitializeComponent();
@@ -50,14 +51,48 @@ namespace Vektorel.KitapBankosuApp
                     }
                     break;
                 case Islem.Update:
-                    //Güncelleme
+                    try
+                    {
+                        YazarBL y = new YazarBL();
+                        Yazar yz = new Yazar();
+                        yz.Ad = txtAd.Text;
+                        yz.Soyad = txtSoyad.Text;
+                        yz.DTar = dtDTar.Value;
+                        if (!chkYasiyor.Checked)
+                        {
+                            yz.OlumTarih = dtOlumTar.Value;
+                        }
+                        yz.Yazarid = yazarid;
+                        if (y.YazarGuncelle(yz))
+                        {
+                            Sifirlama();
+                            MessageBox.Show("Güncelleme Başarılı..");
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Veritabanı Hatası.Hata Numarası:" + ex.Number);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Bilinmeyen bir hata oluştu");
+                    }
                     break;
                 default:
                     break;
             }
+        }
 
-           
-
+        void Sifirlama()
+        {
+            btnEkle.Text = "Ekle";
+            KayitIslem = Islem.Insert;
+            txtAd.Text = "";
+            txtSoyad.Text = "";
+            dtDTar.Value = DateTime.Now;
+            dtOlumTar.Value = DateTime.Now;
+            chkYasiyor.Checked = false;
+            btnSil.Visible = false;
         }
 
         private void ChkYasiyor_CheckedChanged(object sender, EventArgs e)
@@ -76,6 +111,24 @@ namespace Vektorel.KitapBankosuApp
         {
             frmYazarBul frm = new frmYazarBul();
             frm.Show();
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult cvp = MessageBox.Show("Emin misiniz?", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cvp == DialogResult.Yes)
+            {
+                YazarBL yb = new YazarBL();
+                if (yb.YazarSil(yazarid))
+                {
+                    MessageBox.Show("İşlem başarılı");
+                    Sifirlama();
+                }
+            }
+            else
+            {
+                MessageBox.Show("İşlem İptal Edildi..");
+            }
         }
     }
 }

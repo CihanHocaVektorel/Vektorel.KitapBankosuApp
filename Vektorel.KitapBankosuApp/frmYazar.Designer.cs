@@ -39,6 +39,7 @@
             this.dtOlumTar = new System.Windows.Forms.DateTimePicker();
             this.chkYasiyor = new System.Windows.Forms.CheckBox();
             this.btnYazarBul = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAd
@@ -140,11 +141,25 @@
             this.btnYazarBul.UseVisualStyleBackColor = true;
             this.btnYazarBul.Click += new System.EventHandler(this.BtnYazarBul_Click);
             // 
+            // btnSil
+            // 
+            this.btnSil.BackColor = System.Drawing.Color.Red;
+            this.btnSil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSil.Location = new System.Drawing.Point(105, 232);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(100, 23);
+            this.btnSil.TabIndex = 13;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Visible = false;
+            this.btnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
             // frmYazar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 252);
+            this.ClientSize = new System.Drawing.Size(306, 292);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnYazarBul);
             this.Controls.Add(this.chkYasiyor);
             this.Controls.Add(this.dtOlumTar);
@@ -175,5 +190,6 @@
         public System.Windows.Forms.DateTimePicker dtDTar;
         public System.Windows.Forms.DateTimePicker dtOlumTar;
         public System.Windows.Forms.CheckBox chkYasiyor;
+        public System.Windows.Forms.Button btnSil;
     }
 }

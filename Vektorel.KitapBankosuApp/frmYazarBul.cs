@@ -49,6 +49,9 @@ namespace Vektorel.KitapBankosuApp
                 }
                 frm.btnEkle.Text = "Güncelle";
                 frm.KayitIslem = Islem.Update;
+                frm.yazarid = yz.Yazarid;
+                frm.btnSil.Visible = true;
+                this.Close();
             }
         }
     }
