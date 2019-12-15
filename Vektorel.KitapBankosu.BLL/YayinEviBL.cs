@@ -12,9 +12,9 @@ namespace Vektorel.KitapBankosu.BLL
    public class YayinEviBL
     {
         Helper hlp = new Helper();
-        public List<YayinEvi> TurListesi()
+        public List<YayinEvi> YayinEviListesi()
         {
-            SqlDataReader dr = hlp.ExecuteReader("Select * from tblTurler");
+            SqlDataReader dr = hlp.ExecuteReader("Select * from tblYayinEvleri");
             List<YayinEvi> lst = new List<YayinEvi>();
             while (dr.Read())
             {

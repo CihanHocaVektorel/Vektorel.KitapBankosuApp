@@ -93,6 +93,8 @@ namespace Vektorel.KitapBankosu.BLL
                 {
                     yz.OlumTarih = Convert.ToDateTime(dr["OlumTarih"]);
                 }
+                yz.AdSoyad = yz.Ad + " " + yz.Soyad;
+                yz.Yazarid = Convert.ToInt32(dr["YazarId"]);
                 lst.Add(yz);
             }
             dr.Close();

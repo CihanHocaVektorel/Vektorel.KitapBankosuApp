@@ -17,6 +17,8 @@ namespace Vektorel.KitapBankosu.Models
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public DateTime DTar { get; set; }
-        public DateTime OlumTarih { get; set; }        
+        public DateTime OlumTarih { get; set; }
+
+        public string AdSoyad { get; set; }
     }
 }
