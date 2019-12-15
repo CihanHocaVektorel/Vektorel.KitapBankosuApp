@@ -28,6 +28,7 @@ namespace Vektorel.KitapBankosu.BLL
             }
         }
 
+
         
     }
 }

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kitap.cs" />
     <Compile Include="Tur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YayinEvi.cs" />
     <Compile Include="Yazar.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

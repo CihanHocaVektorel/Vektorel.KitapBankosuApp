@@ -38,8 +38,7 @@ namespace Vektorel.KitapBankosuApp
         }
 
         private void CmbYazarlar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+        {           
             if (cmbYazarlar.SelectedIndex==1)
             {
                 frmYazar frm = new frmYazar();
