@@ -11,6 +11,7 @@ namespace Vektorel.KitapBankosu.BLL
 {
     public class TurBL
     {
+        Helper hlp = new Helper();
         public bool TurEkle(Tur tur)
         {
             try
@@ -28,7 +29,20 @@ namespace Vektorel.KitapBankosu.BLL
             }
         }
 
+        public List<Tur> TurListesi()
+        {
+            SqlDataReader dr = hlp.ExecuteReader("Select * from tblTurler");
+            List<Tur> lst = new List<Tur>();
+            while (dr.Read())
+            {
+                Tur t = new Tur();
+                t.Turad = dr["TurAd"].ToString();
+                t.Turid = Convert.ToInt16(dr["TurId"]); 
+                lst.Add(t);
+            }
+            dr.Close();
+            return lst;
+        }
 
-        
     }
 }

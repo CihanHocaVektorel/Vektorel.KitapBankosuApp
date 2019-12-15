@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KitapBL.cs" />
     <Compile Include="TurBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YayinEviBL.cs" />
     <Compile Include="YazarBL.cs" />
   </ItemGroup>
   <ItemGroup>
