@@ -63,5 +63,18 @@ namespace Vektorel.DAL
                 //}
             }
         }
+
+
+        public DataTable MyDataTable(string cmdtext, SqlParameter[] p = null)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmdtext, cn);
+            if (p != null)
+            {
+                da.SelectCommand.Parameters.AddRange(p);
+            }
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

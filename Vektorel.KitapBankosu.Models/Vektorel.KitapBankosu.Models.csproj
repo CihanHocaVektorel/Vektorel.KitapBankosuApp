@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kitap.cs" />
+    <Compile Include="KitapYazar.cs" />
     <Compile Include="Tur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YayinEvi.cs" />

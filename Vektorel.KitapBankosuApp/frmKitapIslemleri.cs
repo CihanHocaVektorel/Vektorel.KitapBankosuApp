@@ -53,6 +53,10 @@ namespace Vektorel.KitapBankosuApp
             {
                 lstYazarlar.Items.Add(yz);
             }
+            else
+            {
+                MessageBox.Show("Yazar Eklenmiş");
+            }
         }
 
         bool YazarKontrol(Yazar yz)
@@ -61,11 +65,45 @@ namespace Vektorel.KitapBankosuApp
             {
                 if (yz.Yazarid == item.Yazarid)
                 {
-                    MessageBox.Show("Yazar Eklenmiş");
                     return false;
                 }
             }
             return true;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            KitapBL ktp = new KitapBL();
+            KitapYazarBL kybl = new KitapYazarBL();
+            Kitap k = new Kitap();
+            k.Adet = short.Parse(txtAdet.Text.Trim());
+            k.BasimYil = short.Parse(txtBasimYil.Text.Trim());
+            k.Isbn = txtIsbn.Text.Trim();
+            k.KitapAd = txtKitapAd.Text.Trim();
+            k.SayfaSayi = short.Parse(txtSayfaSayi.Text.Trim());
+            k.TurId = Convert.ToInt16(cmbTurler.SelectedValue);
+            k.YayinEviId = Convert.ToInt16(cmbYayinevleri.SelectedValue);
+            bool kitapekle = ktp.KitapEkle(k);
+
+            short kitapid = ktp.SonEklenenKitap();
+
+            bool kitapyazar = false;
+            if (kitapid != 0)
+            {
+                foreach (Yazar yazar in lstYazarlar.Items)
+                {
+                    KitapYazar ky = new KitapYazar();
+                    ky.Yazarid = yazar.Yazarid;
+                    ky.Kitapid = kitapid;                   
+                    kitapyazar = kybl.KitapYazarEkle(ky);
+                    // kitapyazar = kybl.KitapYazarEkle(new KitapYazar { Kitapid = kitapid, Yazarid = yazar.Yazarid });
+                }
+            }
+
+            if (kitapekle && kitapyazar)
+            {
+                MessageBox.Show("Ekleme Başarılı");
+            }
         }
     }
 }
