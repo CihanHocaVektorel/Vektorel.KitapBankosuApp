@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.KitapBankosu.BLL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.KitapBankosu.Models", "Vektorel.KitapBankosu.Models\Vektorel.KitapBankosu.Models.csproj", "{AB79ECD0-B2D5-4597-B58E-CCC0E9352A9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.CustomControlsLib", "Vektorel.CustomControlsLib\Vektorel.CustomControlsLib.csproj", "{D60765E6-17DA-43B4-BBD7-B03291E5C4FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AB79ECD0-B2D5-4597-B58E-CCC0E9352A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB79ECD0-B2D5-4597-B58E-CCC0E9352A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB79ECD0-B2D5-4597-B58E-CCC0E9352A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60765E6-17DA-43B4-BBD7-B03291E5C4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60765E6-17DA-43B4-BBD7-B03291E5C4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60765E6-17DA-43B4-BBD7-B03291E5C4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60765E6-17DA-43B4-BBD7-B03291E5C4FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

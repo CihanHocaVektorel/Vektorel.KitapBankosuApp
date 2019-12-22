@@ -150,6 +150,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vektorel.CustomControlsLib\Vektorel.CustomControlsLib.csproj">
+      <Project>{d60765e6-17da-43b4-bbd7-b03291e5c4fd}</Project>
+      <Name>Vektorel.CustomControlsLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vektorel.KitapBankosu.BLL\Vektorel.KitapBankosu.BLL.csproj">
       <Project>{F48E9D99-A3BE-4E46-B26A-99E9CC164AA6}</Project>
       <Name>Vektorel.KitapBankosu.BLL</Name>
@@ -160,14 +164,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\KitapDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="DB\KitapDb.sql" />
-    <Content Include="DB\KitapDB_log.ldf">
-      <DependentUpon>KitapDB.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

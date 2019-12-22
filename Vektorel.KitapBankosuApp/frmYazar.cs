@@ -130,5 +130,19 @@ namespace Vektorel.KitapBankosuApp
                 MessageBox.Show("İşlem İptal Edildi..");
             }
         }
+
+
+
+        private void TxtAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            //{
+            //    e.Handled = true;
+            //}
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

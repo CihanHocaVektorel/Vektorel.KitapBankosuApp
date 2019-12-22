@@ -40,6 +40,7 @@
             this.chkYasiyor = new System.Windows.Forms.CheckBox();
             this.btnYazarBul = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.myTextBox1 = new Vektorel.CustomControlsLib.MyTextBox();
             this.SuspendLayout();
             // 
             // txtAd
@@ -49,6 +50,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 20);
             this.txtAd.TabIndex = 0;
+            this.txtAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAd_KeyPress);
             // 
             // txtSoyad
             // 
@@ -154,11 +156,19 @@
             this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
+            // myTextBox1
+            // 
+            this.myTextBox1.Location = new System.Drawing.Point(144, 13);
+            this.myTextBox1.Name = "myTextBox1";
+            this.myTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.myTextBox1.TabIndex = 14;
+            // 
             // frmYazar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 292);
+            this.Controls.Add(this.myTextBox1);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnYazarBul);
             this.Controls.Add(this.chkYasiyor);
@@ -191,5 +201,6 @@
         public System.Windows.Forms.DateTimePicker dtOlumTar;
         public System.Windows.Forms.CheckBox chkYasiyor;
         public System.Windows.Forms.Button btnSil;
+        private CustomControlsLib.MyTextBox myTextBox1;
     }
 }
