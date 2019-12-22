@@ -28,86 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdYazarlar = new System.Windows.Forms.DataGridView();
-            this.clmAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDtar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmOlumTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveChanges = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grdYazarlar)).BeginInit();
+            this.grdKitaplar = new System.Windows.Forms.DataGridView();
+            this.clmKitapAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmKitapTur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSayfaSayi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmBasimYil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAdet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmYayinEvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmIsbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grdKitaplar)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdYazarlar
+            // grdKitaplar
             // 
-            this.grdYazarlar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdYazarlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdYazarlar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmAd,
-            this.clmSoyad,
-            this.clmDtar,
-            this.clmOlumTarih});
-            this.grdYazarlar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grdYazarlar.Location = new System.Drawing.Point(0, 0);
-            this.grdYazarlar.Name = "grdYazarlar";
-            this.grdYazarlar.Size = new System.Drawing.Size(513, 133);
-            this.grdYazarlar.TabIndex = 0;
+            this.grdKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdKitaplar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmKitapAd,
+            this.clmKitapTur,
+            this.clmSayfaSayi,
+            this.clmBasimYil,
+            this.clmAdet,
+            this.clmYayinEvi,
+            this.clmIsbn});
+            this.grdKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grdKitaplar.Location = new System.Drawing.Point(0, 0);
+            this.grdKitaplar.Name = "grdKitaplar";
+            this.grdKitaplar.Size = new System.Drawing.Size(743, 226);
+            this.grdKitaplar.TabIndex = 0;
             // 
-            // clmAd
+            // clmKitapAd
             // 
-            this.clmAd.DataPropertyName = "Ad";
-            this.clmAd.HeaderText = "Adı";
-            this.clmAd.Name = "clmAd";
+            this.clmKitapAd.DataPropertyName = "KitapAd";
+            this.clmKitapAd.HeaderText = "Kitap Adı";
+            this.clmKitapAd.Name = "clmKitapAd";
             // 
-            // clmSoyad
+            // clmKitapTur
             // 
-            this.clmSoyad.DataPropertyName = "Soyad";
-            this.clmSoyad.HeaderText = "Soyad";
-            this.clmSoyad.Name = "clmSoyad";
+            this.clmKitapTur.DataPropertyName = "TurAd";
+            this.clmKitapTur.HeaderText = "Türü";
+            this.clmKitapTur.Name = "clmKitapTur";
             // 
-            // clmDtar
+            // clmSayfaSayi
             // 
-            this.clmDtar.DataPropertyName = "DTar";
-            this.clmDtar.HeaderText = "Doğum Tarihi";
-            this.clmDtar.Name = "clmDtar";
+            this.clmSayfaSayi.DataPropertyName = "SayfaSayi";
+            this.clmSayfaSayi.HeaderText = "Sayfa Sayısı";
+            this.clmSayfaSayi.Name = "clmSayfaSayi";
             // 
-            // clmOlumTarih
+            // clmBasimYil
             // 
-            this.clmOlumTarih.DataPropertyName = "OlumTarih";
-            this.clmOlumTarih.HeaderText = "Ölüm Tarihi";
-            this.clmOlumTarih.Name = "clmOlumTarih";
+            this.clmBasimYil.DataPropertyName = "BasimYil";
+            this.clmBasimYil.HeaderText = "Basım Yılı";
+            this.clmBasimYil.Name = "clmBasimYil";
             // 
-            // btnSaveChanges
+            // clmAdet
             // 
-            this.btnSaveChanges.Location = new System.Drawing.Point(160, 182);
-            this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(217, 47);
-            this.btnSaveChanges.TabIndex = 1;
-            this.btnSaveChanges.Text = "Değişiklikleri Kaydet";
-            this.btnSaveChanges.UseVisualStyleBackColor = true;
-            this.btnSaveChanges.Click += new System.EventHandler(this.BtnSaveChanges_Click);
+            this.clmAdet.DataPropertyName = "Adet";
+            this.clmAdet.HeaderText = "Adet";
+            this.clmAdet.Name = "clmAdet";
+            // 
+            // clmYayinEvi
+            // 
+            this.clmYayinEvi.DataPropertyName = "YayinEviAd";
+            this.clmYayinEvi.HeaderText = "Yayın Evi";
+            this.clmYayinEvi.Name = "clmYayinEvi";
+            // 
+            // clmIsbn
+            // 
+            this.clmIsbn.DataPropertyName = "Isbn";
+            this.clmIsbn.HeaderText = "Isbn";
+            this.clmIsbn.Name = "clmIsbn";
             // 
             // frmKitapListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 283);
-            this.Controls.Add(this.btnSaveChanges);
-            this.Controls.Add(this.grdYazarlar);
+            this.ClientSize = new System.Drawing.Size(743, 437);
+            this.Controls.Add(this.grdKitaplar);
             this.Name = "frmKitapListe";
             this.Text = "frmKitapListe";
             this.Load += new System.EventHandler(this.FrmKitapListe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdYazarlar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdKitaplar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView grdYazarlar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmAd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmSoyad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDtar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmOlumTarih;
-        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.DataGridView grdKitaplar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmKitapAd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmKitapTur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSayfaSayi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmBasimYil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAdet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmYayinEvi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmIsbn;
     }
 }

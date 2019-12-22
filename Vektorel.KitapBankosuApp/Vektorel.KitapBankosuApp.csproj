@@ -80,6 +80,18 @@
     <Compile Include="frmKitapListe.Designer.cs">
       <DependentUpon>frmKitapListe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYazarListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYazarListe.Designer.cs">
+      <DependentUpon>frmYazarListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTurBul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKitapListe.resx">
       <DependentUpon>frmKitapListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYazarListe.resx">
+      <DependentUpon>frmYazarListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTurBul.resx">
       <DependentUpon>frmTurBul.cs</DependentUpon>

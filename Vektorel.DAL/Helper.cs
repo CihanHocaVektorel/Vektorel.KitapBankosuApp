@@ -65,10 +65,11 @@ namespace Vektorel.DAL
         }
 
 
-        public DataTable MyDataTable(string cmdtext, SqlParameter[] p = null)
+        public DataTable MyDataTable(string cmdtext, SqlParameter[] p = null,CommandType type=CommandType.Text)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmdtext, cn);
+            da.SelectCommand.CommandType = type;
             if (p != null)
             {
                 da.SelectCommand.Parameters.AddRange(p);
