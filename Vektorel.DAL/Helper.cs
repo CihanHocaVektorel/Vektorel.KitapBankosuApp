@@ -39,11 +39,12 @@ namespace Vektorel.DAL
             }
         }
 
-        public SqlDataReader ExecuteReader(string cmdtext, SqlParameter[] p = null)
+        public SqlDataReader ExecuteReader(string cmdtext, SqlParameter[] p = null,CommandType type=CommandType.Text)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand(cmdtext, cn);
+                cmd.CommandType = type;
                 if (p != null)
                 {
                     cmd.Parameters.AddRange(p);

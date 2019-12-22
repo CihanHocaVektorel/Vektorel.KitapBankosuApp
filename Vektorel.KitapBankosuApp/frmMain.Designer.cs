@@ -96,6 +96,7 @@
             this.kitapKayıtİşlemleriToolStripMenuItem.Name = "kitapKayıtİşlemleriToolStripMenuItem";
             this.kitapKayıtİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.kitapKayıtİşlemleriToolStripMenuItem.Text = "Kitap Kayıt İşlemleri";
+            this.kitapKayıtİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.KitapKayıtİşlemleriToolStripMenuItem_Click);
             // 
             // kitapListelemeİşlemleriToolStripMenuItem
             // 

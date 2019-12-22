@@ -47,5 +47,12 @@ namespace Vektorel.KitapBankosuApp
         {
            
         }
+
+        private void KitapKayıtİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKitapIslemleri frm = new frmKitapIslemleri();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

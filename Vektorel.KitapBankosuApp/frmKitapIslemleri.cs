@@ -18,7 +18,16 @@ namespace Vektorel.KitapBankosuApp
         {
             InitializeComponent();
         }
+
+        public frmKitapIslemleri(int kitapid)
+        {
+            InitializeComponent();
+            this.kitapid = kitapid;
+        }
+
         List<Yazar> yazarlar;
+        private int kitapid=0;
+
         private void FrmKitapIslemleri_Load(object sender, EventArgs e)
         {
             YazarBL yb = new YazarBL();
@@ -38,6 +47,23 @@ namespace Vektorel.KitapBankosuApp
             cmbYazarlar.DisplayMember = "AdSoyad";
             cmbYazarlar.ValueMember = "Yazarid";
             cmbYazarlar.DataSource = yazarlar;
+
+            if (kitapid!=0)
+            {
+                KitapBL kb = new KitapBL();
+                Kitap k = kb.KitapGetir(kitapid);
+                txtAdet.Text = k.Adet.ToString();
+                txtBasimYil.Text = k.BasimYil.ToString();
+                txtIsbn.Text = k.Isbn;
+                txtKitapAd.Text = k.KitapAd;
+                txtSayfaSayi.Text = k.SayfaSayi.ToString();
+                cmbTurler.SelectedValue = k.TurId;
+                cmbYayinevleri.SelectedValue = k.YayinEviId;
+                KitapYazarBL kybl = new KitapYazarBL();
+                lstYazarlar.DisplayMember = "AdSoyad";
+                lstYazarlar.ValueMember = "Yazarid";
+                lstYazarlar.DataSource = kybl.KitapYazarListesi(kitapid);
+            }
         }
 
         private void BtnYazarEkle_Click(object sender, EventArgs e)

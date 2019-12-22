@@ -53,8 +53,10 @@
             this.grdKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grdKitaplar.Location = new System.Drawing.Point(0, 0);
             this.grdKitaplar.Name = "grdKitaplar";
+            this.grdKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdKitaplar.Size = new System.Drawing.Size(743, 226);
             this.grdKitaplar.TabIndex = 0;
+            this.grdKitaplar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdKitaplar_CellDoubleClick);
             // 
             // clmKitapAd
             // 

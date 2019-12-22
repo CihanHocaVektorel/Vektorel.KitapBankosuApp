@@ -182,7 +182,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\KitapDb.sql" />
+    <Content Include="DB\KitapBankosuDB.sql" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
